@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeneralskiiExam.MainPage" Title="Экзамен">
+    <StackLayout Spacing="5">
+        <ListView x:Name="abonentsList" ItemSelected="workersList_ItemSelected" RowHeight="60">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding FIO}"/>
+                            <StackLayout Orientation="Horizontal" Spacing="5">
+                                <Label Text="Номер телефона -"/>
+                                <Label Text="{Binding Number}"/>
+                                <Label Text="Адрес -"/>
+                                <Label Text="{Binding adress}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label x:Name="label1"/>
+        <Label x:Name="lbSelectedText" FontSize="20"/>
+        <Button x:Name="btnSave" Text="Сохранить файл" Clicked="btnSave_Clicked"/>
+        <Button x:Name="btnOpen" Text="Открыть файл" Clicked="btnOpen_Clicked"/>
+        <Button x:Name="btnAdd" Clicked="btnAdd_Clicked" Text="Добавить запись"/>
+        <Button Clicked="btnEdit_Clicked"  Text="Редактировать запись"/>
+        <Button x:Name="btnDel" Clicked="btnDel_Clicked" Text="Удалить запись"/>
+    </StackLayout>
+</ContentPage>

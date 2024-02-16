@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeneralskiiExam.AddPage"
+             Title="Страница добавления">
+    <StackLayout Spacing="5">
+        <Label Text="ФИО"/>
+        <Entry x:Name="entFIO"/>
+        <Label Text="Телефон"/>
+        <Entry x:Name="entNumber"/>
+        <Label Text="Адрес"/>
+        <Entry x:Name="entAdress"/>
+        <Button x:Name="btnAdd" Clicked="btnAdd_Clicked"  Text="Добавить запись"/>
+        <Button Clicked="btnBack_Clicked"  Text="Вернуться на основное окно"/>
+    </StackLayout>
+</ContentPage>
